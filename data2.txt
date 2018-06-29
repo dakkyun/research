@@ -1,510 +1,532 @@
 rotation
-152 [mm], 138 [mm]
-position
-x : 7.941780  y : 0.001534  deg : 176.990624
-
+380 [mm], 162 [mm]
 rotation
-152 [mm], 138 [mm]
-position
-x : 7.964414  y : 0.001091  deg : 175.244740
-
+370 [mm], 166 [mm]
 rotation
-156 [mm], 163 [mm]
-position
-x : 7.946389  y : -0.002354  deg : 176.986249
-
+379 [mm], 166 [mm]
 rotation
-153 [mm], 136 [mm]
-position
-x : 7.960362  y : -0.000174  deg : 179.749128
-
+377 [mm], 172 [mm]
 rotation
-143 [mm], 139 [mm]
-position
-x : 7.762804  y : 0.000000  deg : 179.749999
-
+164 [mm], 154 [mm]
 rotation
-171 [mm], 150 [mm]
-position
-x : 7.951711  y : 0.002967  deg : 172.483886
-
+174 [mm], 520 [mm]
 rotation
-144 [mm], 137 [mm]
-position
-x : 7.914048  y : 0.000000  deg : 171.749996
-
+178 [mm], 523 [mm]
 rotation
-141 [mm], 132 [mm]
-position
-x : 3.483723  y : 1.040454  deg : 16.776634
-
+180 [mm], 443 [mm]
 rotation
-151 [mm], 146 [mm]
-position
-x : 7.949475  y : 0.000886  deg : 176.744987
-
+159 [mm], 223 [mm]
 rotation
-179 [mm], 157 [mm]
-position
-x : 7.800321  y : 0.120995  deg : -1.213714
-
+163 [mm], 232 [mm]
 rotation
-1050 [mm], 989 [mm]
-position
-x : 7.627112  y : 0.077003  deg : 157.082212
-
+166 [mm], 356 [mm]
 rotation
-737 [mm], 764 [mm]
-position
-x : -4.763051  y : 0.000000  deg : 180.000000
-
+164 [mm], 345 [mm]
 rotation
-2655 [mm], 65533 [mm]
-position
-x : 6.977265  y : -1.456173  deg : 65.332062
-
+161 [mm], 362 [mm]
 rotation
-5881 [mm], 5572 [mm]
-position
-x : 5.076754  y : 0.452019  deg : 164.210009
-
+167 [mm], 310 [mm]
 rotation
-2782 [mm], 2709 [mm]
-position
-x : -nan  y : -nan  deg : -nan
-
+155 [mm], 234 [mm]
 rotation
-2756 [mm], 2703 [mm]
-position
-x : 7.190875  y : -0.455160  deg : 17.140792
-
+161 [mm], 351 [mm]
+rotation
+546 [mm], 147 [mm]
+rotation
+496 [mm], 412 [mm]
+rotation
+378 [mm], 434 [mm]
+rotation
+423 [mm], 167 [mm]
+rotation
+150 [mm], 460 [mm]
+rotation
+204 [mm], 245 [mm]
+rotation
+1290 [mm], 910 [mm]
+rotation
+1249 [mm], 1329 [mm]
+rotation
+273 [mm], 242 [mm]
+rotation
+1228 [mm], 733 [mm]
+rotation
+726 [mm], 993 [mm]
+rotation
+1195 [mm], 1249 [mm]
+rotation
+3771 [mm], 466 [mm]
+rotation
+465 [mm], 442 [mm]
+rotation
+523 [mm], 522 [mm]
+rotation
+1478 [mm], 1780 [mm]
+rotation
+4473 [mm], 4172 [mm]
+rotation
+4005 [mm], 3908 [mm]
+rotation
+3686 [mm], 3211 [mm]
+rotation
+2941 [mm], 2767 [mm]
+rotation
+1945 [mm], 1848 [mm]
+rotation
+2088 [mm], 2236 [mm]
+rotation
+1991 [mm], 1944 [mm]
+rotation
+1472 [mm], 1665 [mm]
+rotation
+1981 [mm], 2392 [mm]
+rotation
+1382 [mm], 1561 [mm]
+rotation
+1459 [mm], 1675 [mm]
+rotation
+1203 [mm], 1342 [mm]
+rotation
+1133 [mm], 1281 [mm]
+rotation
+65533 [mm], 2335 [mm]
+rotation
+3737 [mm], 3707 [mm]
+rotation
+3486 [mm], 983 [mm]
+rotation
+497 [mm], 537 [mm]
+rotation
+441 [mm], 510 [mm]
+rotation
+268 [mm], 296 [mm]
+rotation
+2307 [mm], 2273 [mm]
+rotation
+3346 [mm], 10481 [mm]
+rotation
+6984 [mm], 7469 [mm]
+rotation
+14370 [mm], 10266 [mm]
+rotation
+2992 [mm], 2796 [mm]
+rotation
+2033 [mm], 65533 [mm]
+rotation
+845 [mm], 762 [mm]
+rotation
+463 [mm], 462 [mm]
+rotation
+584 [mm], 629 [mm]
 rotation
 65533 [mm], 65533 [mm]
-position
-x : 7.122243  y : 0.004120  deg : 25.231059
-
-rotation
-65533 [mm], 65533 [mm]
-position
-x : 7.627600  y : -1.171378  deg : 25.636308
-
-rotation
-65533 [mm], 3221 [mm]
-position
-x : 5.475576  y : -0.753854  deg : 7.873095
-
-rotation
-3840 [mm], 4032 [mm]
-position
-x : 7.744841  y : -1.197229  deg : -0.968862
-
-rotation
-11490 [mm], 11612 [mm]
-position
-x : 7.703622  y : -1.474309  deg : 13.616579
-
-rotation
-3795 [mm], 3798 [mm]
-position
-x : 7.642712  y : 1.532428  deg : 6.874132
-
-rotation
-3847 [mm], 3873 [mm]
-position
-x : 7.594033  y : -1.464681  deg : 10.241841
-
-rotation
-3803 [mm], 3819 [mm]
-position
-x : 7.662386  y : 1.522455  deg : 6.753377
-
-rotation
-3849 [mm], 3840 [mm]
-position
-x : 7.732764  y : -1.487336  deg : -0.814115
-
-rotation
-4072 [mm], 3899 [mm]
-position
-x : 7.588185  y : -1.318357  deg : -2.152767
-
-rotation
-4049 [mm], 3895 [mm]
-position
-x : 7.148979  y : 1.403429  deg : 27.732070
-
-rotation
-3868 [mm], 3871 [mm]
-position
-x : 7.580804  y : 1.526145  deg : 6.608999
-
-rotation
-3846 [mm], 3818 [mm]
-position
-x : 7.551218  y : 1.525412  deg : 3.394099
-
-rotation
-3804 [mm], 3842 [mm]
-position
-x : 7.607268  y : 1.506904  deg : 8.607586
-
-rotation
-3781 [mm], 3805 [mm]
-position
-x : 7.435992  y : -1.444930  deg : 2.072480
-
-rotation
-3851 [mm], 3817 [mm]
-position
-x : 7.686657  y : -1.469273  deg : 11.538784
-
-rotation
-11543 [mm], 11507 [mm]
-position
-x : 7.389270  y : -1.403559  deg : 6.015285
-
-rotation
-3827 [mm], 3830 [mm]
-position
-x : 7.609786  y : -1.465184  deg : -2.586914
-
-rotation
-3899 [mm], 11512 [mm]
-position
-x : 7.673426  y : -1.453216  deg : 7.665402
-
-rotation
-4531 [mm], 4405 [mm]
-position
-x : 7.425434  y : -1.524716  deg : 37.148162
-
-rotation
-5036 [mm], 4917 [mm]
-position
-x : 7.597927  y : -1.457527  deg : 23.672041
-
-rotation
-5675 [mm], 5538 [mm]
-position
-x : 7.826055  y : 1.496846  deg : 7.128466
-
-rotation
-5942 [mm], 5869 [mm]
-position
-x : 5.766168  y : 1.451714  deg : 5.481127
-
-rotation
-5876 [mm], 5878 [mm]
-position
-x : 6.189778  y : -1.421558  deg : -6.642359
-
-rotation
-5823 [mm], 5838 [mm]
-position
-x : 5.707305  y : 1.528318  deg : 5.312447
-
-rotation
-5801 [mm], 5866 [mm]
-position
-x : 5.889861  y : 1.452311  deg : 2.962152
-
-rotation
-5875 [mm], 5863 [mm]
-position
-x : 6.328181  y : -1.521503  deg : -9.054968
-
-rotation
-5878 [mm], 5896 [mm]
-position
-x : 5.942202  y : 1.463951  deg : 2.321340
-
-rotation
-5878 [mm], 5911 [mm]
-position
-x : 4.174250  y : 1.322299  deg : 17.683244
-
-rotation
-6028 [mm], 5929 [mm]
-position
-x : 7.854123  y : 1.468950  deg : 7.671285
-
-rotation
-6078 [mm], 5962 [mm]
-position
-x : 7.378394  y : -1.345754  deg : 29.292286
-
-rotation
-6380 [mm], 6304 [mm]
-position
-x : 6.333406  y : 1.433445  deg : 3.551023
-
-rotation
-5904 [mm], 5910 [mm]
-position
-x : 7.766085  y : 1.419035  deg : 3.610515
-
-rotation
-4984 [mm], 5001 [mm]
-position
-x : 7.734007  y : -1.408516  deg : 3.444160
-
-rotation
-4091 [mm], 4101 [mm]
-position
-x : 7.753387  y : 1.472578  deg : 7.757134
-
-rotation
-3627 [mm], 3635 [mm]
-position
-x : 7.655037  y : 1.443053  deg : 15.694319
-
-rotation
-3226 [mm], 3190 [mm]
-position
-x : 7.634305  y : 1.432663  deg : 17.069296
-
-rotation
-2801 [mm], 2772 [mm]
-position
-x : 7.561667  y : 1.467250  deg : 3.133216
-
-rotation
-2246 [mm], 2245 [mm]
-position
-x : 7.506263  y : 1.443106  deg : 3.637605
-
-rotation
-1781 [mm], 1753 [mm]
-position
-x : 7.692395  y : -1.472279  deg : -2.198871
-
-rotation
-1444 [mm], 1428 [mm]
-position
-x : 7.599788  y : -1.449167  deg : -1.311610
-
-rotation
-1262 [mm], 1217 [mm]
-position
-x : 7.475990  y : -1.443058  deg : 0.457224
-
-rotation
-1235 [mm], 1233 [mm]
-position
-x : 7.442473  y : -1.448764  deg : -1.951806
-
-rotation
-1244 [mm], 1225 [mm]
-position
-x : 6.698624  y : 1.771584  deg : 34.050383
-
-rotation
-1218 [mm], 1214 [mm]
-position
-x : 7.451851  y : -1.428976  deg : -0.013398
-
-rotation
-1228 [mm], 1203 [mm]
-position
-x : 6.787736  y : 1.724845  deg : 35.100503
-
-rotation
-1228 [mm], 1219 [mm]
-position
-x : 7.465620  y : -1.426057  deg : -0.457750
-
-rotation
-1450 [mm], 1432 [mm]
-position
-x : 7.812554  y : -1.442058  deg : -1.343923
-
-rotation
-1926 [mm], 1934 [mm]
-position
-x : -7.336271  y : 0.000000  deg : 13.500000
-
-rotation
-2316 [mm], 2294 [mm]
-position
-x : 7.446548  y : 1.445228  deg : 20.704423
-
-rotation
-2300 [mm], 2295 [mm]
-position
-x : 7.693581  y : 1.458195  deg : 9.617217
-
-rotation
-2396 [mm], 2312 [mm]
-position
-x : 7.581406  y : 1.395007  deg : 15.702700
-
-rotation
-2451 [mm], 2415 [mm]
-position
-x : 7.653262  y : 1.399984  deg : 15.410690
-
-rotation
-2612 [mm], 2557 [mm]
-position
-x : 7.616270  y : 1.445400  deg : 5.868119
-
-rotation
-2563 [mm], 2532 [mm]
-position
-x : 3.926141  y : 0.976759  deg : 7.267128
-
-rotation
-2999 [mm], 2909 [mm]
-position
-x : 7.652648  y : 1.450319  deg : 6.218672
-
-rotation
-3384 [mm], 3373 [mm]
-position
-x : 7.731476  y : 1.446137  deg : 13.019095
-
-rotation
-3639 [mm], 3609 [mm]
-position
-x : 7.617466  y : 1.415868  deg : 24.368978
-
-rotation
-3642 [mm], 3624 [mm]
-position
-x : 7.655038  y : 1.416993  deg : 21.932301
-
-rotation
-3617 [mm], 3600 [mm]
-position
-x : 7.633068  y : 1.399413  deg : 26.442459
-
-rotation
-3654 [mm], 3615 [mm]
-position
-x : 7.664891  y : 1.369229  deg : 7.002405
-
-rotation
-3712 [mm], 3690 [mm]
-position
-x : 7.630568  y : 1.321670  deg : 2.616697
-
-rotation
-3672 [mm], 3675 [mm]
-position
-x : 7.558959  y : 1.340925  deg : 3.206452
-
-rotation
-3719 [mm], 3692 [mm]
-position
-x : 7.778115  y : 1.306992  deg : 8.385123
-
-rotation
-3655 [mm], 3641 [mm]
-position
-x : 7.541503  y : -1.262552  deg : 0.708529
-
-rotation
-3605 [mm], 3622 [mm]
-position
-x : 7.640812  y : 1.279960  deg : 26.175424
-
-rotation
-4119 [mm], 13235 [mm]
-position
-x : 7.724113  y : -1.255227  deg : 17.895974
-
-rotation
-4229 [mm], 3887 [mm]
-position
-x : 7.612912  y : -1.042985  deg : 22.111636
-
-rotation
-10446 [mm], 10164 [mm]
-position
-x : 7.758769  y : 1.123039  deg : 4.373048
-
-rotation
-5438 [mm], 5392 [mm]
-position
-x : 7.725354  y : -1.125352  deg : 15.215115
-
-rotation
-4829 [mm], 4804 [mm]
-position
-x : 7.969444  y : 1.159332  deg : 8.259775
-
-rotation
-4533 [mm], 4702 [mm]
-position
-x : 7.443512  y : 1.171031  deg : 16.167629
-
-rotation
-65533 [mm], 8198 [mm]
-position
-x : 7.413192  y : 0.139994  deg : 152.081882
-
-rotation
-279 [mm], 284 [mm]
-position
-x : 7.981460  y : 0.061887  deg : 31.427283
-
-rotation
-272 [mm], 264 [mm]
-position
-x : 7.975537  y : 0.021675  deg : 96.708810
-
-rotation
-269 [mm], 195 [mm]
-position
-x : 7.981173  y : 0.019289  deg : 87.805210
-
-rotation
-251 [mm], 195 [mm]
-position
-x : -nan  y : -nan  deg : -nan
-
-rotation
-213 [mm], 184 [mm]
-position
-x : 7.971415  y : 0.016022  deg : 121.479747
-
-rotation
-237 [mm], 209 [mm]
-position
-x : 7.979152  y : 0.021021  deg : 89.514032
-
-rotation
-270 [mm], 244 [mm]
-position
-x : 7.980745  y : 0.020436  deg : 84.545838
-
-rotation
-241 [mm], 205 [mm]
-position
-x : 7.979010  y : 0.019219  deg : 93.771601
-
-rotation
-238 [mm], 218 [mm]
-position
-x : 7.979554  y : 0.017602  deg : 97.524985
-
-rotation
-259 [mm], 191 [mm]
-position
-x : 7.981345  y : 0.016764  deg : 96.056143
-
-rotation
-254 [mm], 218 [mm]
-position
-x : 7.967885  y : 0.004952  deg : 161.233589
-
-rotation
-255 [mm], 212 [mm]
-position
-x : -nan  y : -nan  deg : -nan
-
-rotation
-241 [mm], 237 [mm]
-position
-x : -nan  y : -nan  deg : -nan
-
+rotation
+1075 [mm], 1124 [mm]
+rotation
+1049 [mm], 1097 [mm]
+rotation
+1204 [mm], 1259 [mm]
+rotation
+1319 [mm], 1344 [mm]
+rotation
+1375 [mm], 1395 [mm]
+rotation
+1492 [mm], 1505 [mm]
+rotation
+1567 [mm], 1573 [mm]
+rotation
+1561 [mm], 1566 [mm]
+rotation
+1563 [mm], 1552 [mm]
+rotation
+1551 [mm], 1567 [mm]
+rotation
+1562 [mm], 1555 [mm]
+rotation
+1563 [mm], 1569 [mm]
+rotation
+1566 [mm], 1566 [mm]
+rotation
+70 [mm], 73 [mm]
+rotation
+32 [mm], 49 [mm]
+rotation
+52 [mm], 46 [mm]
+rotation
+33 [mm], 37 [mm]
+rotation
+37 [mm], 38 [mm]
+rotation
+26 [mm], 31 [mm]
+rotation
+39 [mm], 46 [mm]
+rotation
+45 [mm], 41 [mm]
+rotation
+1580 [mm], 1571 [mm]
+rotation
+1581 [mm], 1585 [mm]
+rotation
+1574 [mm], 1583 [mm]
+rotation
+1583 [mm], 1579 [mm]
+rotation
+1578 [mm], 1587 [mm]
+rotation
+1583 [mm], 1590 [mm]
+rotation
+1591 [mm], 1600 [mm]
+rotation
+1624 [mm], 1660 [mm]
+rotation
+1667 [mm], 1714 [mm]
+rotation
+1717 [mm], 1779 [mm]
+rotation
+1733 [mm], 1802 [mm]
+rotation
+1757 [mm], 1836 [mm]
+rotation
+1796 [mm], 1884 [mm]
+rotation
+1836 [mm], 1936 [mm]
+rotation
+1872 [mm], 1984 [mm]
+rotation
+1895 [mm], 2012 [mm]
+rotation
+1929 [mm], 2060 [mm]
+rotation
+1964 [mm], 2100 [mm]
+rotation
+1972 [mm], 2117 [mm]
+rotation
+1980 [mm], 2122 [mm]
+rotation
+2005 [mm], 2143 [mm]
+rotation
+2030 [mm], 2176 [mm]
+rotation
+2035 [mm], 2200 [mm]
+rotation
+2047 [mm], 2198 [mm]
+rotation
+2030 [mm], 2183 [mm]
+rotation
+2015 [mm], 2151 [mm]
+rotation
+1972 [mm], 2102 [mm]
+rotation
+1882 [mm], 2002 [mm]
+rotation
+1825 [mm], 1917 [mm]
+rotation
+1775 [mm], 1855 [mm]
+rotation
+1726 [mm], 1786 [mm]
+rotation
+1683 [mm], 1735 [mm]
+rotation
+1654 [mm], 1695 [mm]
+rotation
+1641 [mm], 1665 [mm]
+rotation
+1624 [mm], 1630 [mm]
+rotation
+1604 [mm], 1624 [mm]
+rotation
+1607 [mm], 1610 [mm]
+rotation
+1604 [mm], 1617 [mm]
+rotation
+1599 [mm], 1605 [mm]
+rotation
+1594 [mm], 1603 [mm]
+rotation
+1596 [mm], 1593 [mm]
+rotation
+1582 [mm], 1580 [mm]
+rotation
+1585 [mm], 1569 [mm]
+rotation
+1595 [mm], 1578 [mm]
+rotation
+1620 [mm], 1580 [mm]
+rotation
+1638 [mm], 1581 [mm]
+rotation
+1659 [mm], 1596 [mm]
+rotation
+1680 [mm], 1612 [mm]
+rotation
+1706 [mm], 1625 [mm]
+rotation
+1750 [mm], 1655 [mm]
+rotation
+1780 [mm], 1686 [mm]
+rotation
+1797 [mm], 1699 [mm]
+rotation
+1842 [mm], 1724 [mm]
+rotation
+1843 [mm], 1727 [mm]
+rotation
+1854 [mm], 1752 [mm]
+rotation
+1879 [mm], 1752 [mm]
+rotation
+1912 [mm], 1775 [mm]
+rotation
+1919 [mm], 1783 [mm]
+rotation
+1858 [mm], 1742 [mm]
+rotation
+1827 [mm], 1716 [mm]
+rotation
+1795 [mm], 1690 [mm]
+rotation
+1842 [mm], 1723 [mm]
+rotation
+2789 [mm], 2023 [mm]
+rotation
+65533 [mm], 8345 [mm]
+rotation
+1399 [mm], 1587 [mm]
+rotation
+1278 [mm], 1429 [mm]
+rotation
+975 [mm], 1021 [mm]
+rotation
+1195 [mm], 1307 [mm]
+rotation
+1205 [mm], 1281 [mm]
+rotation
+1600 [mm], 1758 [mm]
+rotation
+1450 [mm], 1532 [mm]
+rotation
+1591 [mm], 1712 [mm]
+rotation
+1441 [mm], 1509 [mm]
+rotation
+62 [mm], 56 [mm]
+rotation
+47 [mm], 41 [mm]
+rotation
+62 [mm], 45 [mm]
+rotation
+48 [mm], 53 [mm]
+rotation
+55 [mm], 47 [mm]
+rotation
+61 [mm], 55 [mm]
+rotation
+48 [mm], 30 [mm]
+rotation
+40 [mm], 48 [mm]
+rotation
+1569 [mm], 1567 [mm]
+rotation
+1566 [mm], 1569 [mm]
+rotation
+1562 [mm], 1559 [mm]
+rotation
+1566 [mm], 1558 [mm]
+rotation
+1563 [mm], 1567 [mm]
+rotation
+1566 [mm], 1578 [mm]
+rotation
+1587 [mm], 1623 [mm]
+rotation
+1619 [mm], 1655 [mm]
+rotation
+1645 [mm], 1704 [mm]
+rotation
+1691 [mm], 1766 [mm]
+rotation
+1743 [mm], 1832 [mm]
+rotation
+1793 [mm], 1890 [mm]
+rotation
+1835 [mm], 1955 [mm]
+rotation
+1894 [mm], 2027 [mm]
+rotation
+1906 [mm], 2043 [mm]
+rotation
+1886 [mm], 2030 [mm]
+rotation
+1855 [mm], 1980 [mm]
+rotation
+1769 [mm], 1872 [mm]
+rotation
+1704 [mm], 1773 [mm]
+rotation
+1650 [mm], 1709 [mm]
+rotation
+1604 [mm], 1641 [mm]
+rotation
+1578 [mm], 1609 [mm]
+rotation
+1555 [mm], 1566 [mm]
+rotation
+1552 [mm], 1559 [mm]
+rotation
+1550 [mm], 1545 [mm]
+rotation
+1554 [mm], 1545 [mm]
+rotation
+1545 [mm], 1531 [mm]
+rotation
+1547 [mm], 1528 [mm]
+rotation
+1557 [mm], 1529 [mm]
+rotation
+1577 [mm], 1541 [mm]
+rotation
+1586 [mm], 1542 [mm]
+rotation
+1619 [mm], 1562 [mm]
+rotation
+1654 [mm], 1581 [mm]
+rotation
+1692 [mm], 1608 [mm]
+rotation
+1778 [mm], 1669 [mm]
+rotation
+1887 [mm], 1758 [mm]
+rotation
+1996 [mm], 1844 [mm]
+rotation
+2015 [mm], 1857 [mm]
+rotation
+1975 [mm], 1805 [mm]
+rotation
+1900 [mm], 1756 [mm]
+rotation
+1706 [mm], 1618 [mm]
+rotation
+1602 [mm], 1560 [mm]
+rotation
+1563 [mm], 1558 [mm]
+rotation
+1562 [mm], 1547 [mm]
+rotation
+1562 [mm], 1561 [mm]
+rotation
+1572 [mm], 1562 [mm]
+rotation
+1596 [mm], 1590 [mm]
+rotation
+66 [mm], 54 [mm]
+rotation
+52 [mm], 44 [mm]
+rotation
+61 [mm], 66 [mm]
+rotation
+76 [mm], 73 [mm]
+rotation
+275 [mm], 311 [mm]
+rotation
+70 [mm], 76 [mm]
+rotation
+108 [mm], 112 [mm]
+rotation
+38 [mm], 40 [mm]
+rotation
+62 [mm], 48 [mm]
+rotation
+54 [mm], 46 [mm]
+rotation
+47 [mm], 50 [mm]
+rotation
+65 [mm], 59 [mm]
+rotation
+56 [mm], 71 [mm]
+rotation
+65 [mm], 57 [mm]
+rotation
+71 [mm], 58 [mm]
+rotation
+52 [mm], 63 [mm]
+rotation
+1048 [mm], 1335 [mm]
+rotation
+118 [mm], 141 [mm]
+rotation
+89 [mm], 86 [mm]
+rotation
+77 [mm], 103 [mm]
+rotation
+83 [mm], 88 [mm]
+rotation
+82 [mm], 65 [mm]
+rotation
+52 [mm], 95 [mm]
+rotation
+61 [mm], 45 [mm]
+rotation
+54 [mm], 56 [mm]
+rotation
+60 [mm], 59 [mm]
+rotation
+48 [mm], 55 [mm]
+rotation
+72 [mm], 68 [mm]
+rotation
+77 [mm], 75 [mm]
+rotation
+78 [mm], 74 [mm]
+rotation
+50 [mm], 42 [mm]
+rotation
+59 [mm], 59 [mm]
+rotation
+58 [mm], 58 [mm]
+rotation
+45 [mm], 67 [mm]
+rotation
+1206 [mm], 653 [mm]
+rotation
+581 [mm], 736 [mm]
+rotation
+349 [mm], 300 [mm]
+rotation
+326 [mm], 219 [mm]
+rotation
+283 [mm], 219 [mm]
+rotation
+279 [mm], 225 [mm]
+rotation
+47 [mm], 52 [mm]
+rotation
+52 [mm], 44 [mm]
+rotation
+47 [mm], 51 [mm]
+rotation
+46 [mm], 47 [mm]
+rotation
+37 [mm], 29 [mm]
+rotation
+302 [mm], 245 [mm]
+rotation
+307 [mm], 237 [mm]
+rotation
+351 [mm], 230 [mm]
+rotation
+367 [mm], 239 [mm]
+rotation
+356 [mm], 238 [mm]
+rotation
+373 [mm], 237 [mm]
+rotation
+364 [mm], 239 [mm]
+rotation
+368 [mm], 238 [mm]
+rotation
+359 [mm], 239 [mm]
+rotation
+373 [mm], 240 [mm]
+rotation
+349 [mm], 230 [mm]
