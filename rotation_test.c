@@ -74,11 +74,11 @@ int main(int argc, char *argv[])
 
   int i;
 
-  fp = fopen("0deg.txt","w");
+  /*fp = fopen("0deg.txt","w");
   if(fp == NULL){
     printf("cant file open\n");
     exit(1);
-  }
+  }*/
 
   while(1){
     if (open_urg_sensor(&urg, argc, argv, "172.16.0.10") < 0) {
@@ -110,5 +110,5 @@ int main(int argc, char *argv[])
     free(data);
     urg_close(&urg);
   }
-  fclose(fp);
+  //fclose(fp);
 }
