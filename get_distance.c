@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#include <time.h>
 
 #define BAUDRATE B9600
 #include <string.h>
@@ -22,7 +23,7 @@
 #include <unistd.h>
 
 int rotation(urg_t *urg, long data[], int data_n);
-void serial_arduinowrite(int, int);
+void serial_arduinowrite(int, double);
 
 double x, y, slope;
 
@@ -39,7 +40,7 @@ int rotation(urg_t *urg, long data[], int data_n)
 
   (void)data_n;
 
-    // Å}12degÇÃÉfÅ[É^ÇÃÇ›Çï\é¶
+  // Å12degÇÃÉfÅ[É^ÇÃÇ›Çï\é¶
   first_index = urg_step2index(urg, -20);
   second_index = urg_step2index(urg, +20);
   third_index = urg_step2index(urg, 0);
@@ -72,6 +73,8 @@ int rotation(urg_t *urg, long data[], int data_n)
     //printf("rotation : %f [deg]\n", phi);
     //fprintf(fp,"rotation : %f [deg]\n", phi);
   }
+  printf("phi : %f  ", phi);
+  fprintf(fp,"phi : %f  ", phi);
 
   return phi;
 }
@@ -193,10 +196,6 @@ void print_data(urg_t *urg, long data[], int data_n, long time_stamp)
   b_2 = y_a - (a_2 * x_a);
 
   //side line
-  if(data[180] < data[900]){
-    flag = 1;
-  }
-
   for(i = 189;i < 400;i++){
     j = i;
     k = 0;
@@ -269,28 +268,8 @@ void print_data(urg_t *urg, long data[], int data_n, long time_stamp)
     }
   }
 
-  counter = 0;
-  for(i = 189;i < 400;i++){
-    if(a_1[i] != 0){
-      counter++;
-      angle = acos( fabs(a_1[i]*a_2 + b_1[i]*b_2) / sqrt( pow(a_1[i] , 2) + pow(b_1[i] , 2) ) * sqrt( pow(a_2 , 2) + pow(b_2 , 2) ) );
-
-      if(counter == 1){
-        angle_jdg = angle * (180 / M_PI);
-        step_s = i;
-      }
-      else if( fabs(90.0 - angle_jdg) > fabs(90.0 - angle * (180 / M_PI)) ){
-        angle_jdg = angle * (180 / M_PI);
-        step_s = i;
-      }
-    }
-  }
-
   //next side line
   for(i = 900;i > 680;i--){
-    if(flag == 1)
-      break;
-
     j = i;
     k = 0;
     while(1){
@@ -363,13 +342,10 @@ void print_data(urg_t *urg, long data[], int data_n, long time_stamp)
   }
 
   counter = 0;
-  for(i = 900;i > 680;i--){
-    if(flag == 1)
-      break;
-
+  for(i = 189;i <= 900;i++){
     if(a_1[i] != 0){
       counter++;
-      angle = acos( fabs(a_1[i]*a_2 + b_1[i]*b_2) / sqrt( pow(a_1[i] , 2) + pow(b_1[i] , 2) ) * sqrt( pow(a_2 , 2) + pow(b_2 , 2) ) );
+      angle = acos( fabs(a_1[i]*a_2 + 1) / sqrt( pow(a_1[i] , 2) + 1 ) * sqrt( pow(a_2 , 2) + 1 ) );
 
       if(counter == 1){
         angle_jdg = angle * (180 / M_PI);
@@ -378,9 +354,13 @@ void print_data(urg_t *urg, long data[], int data_n, long time_stamp)
       else if( fabs(90.0 - angle_jdg) > fabs(90.0 - angle * (180 / M_PI)) ){
         angle_jdg = angle * (180 / M_PI);
         step_s = i;
-      }	
+      }
     }
   }
+  if(189 <= step_s && step_s < 400)
+    flag = 1;
+  else
+    flag = 0;
 
   //corner
   x_c = (b_2 - b_1[step_s]) / (a_1[step_s] - a_2);
@@ -460,17 +440,16 @@ void print_data(urg_t *urg, long data[], int data_n, long time_stamp)
 
   x += 4.0;
   printf("x : %f  y : %f  deg : %f\n",x,y,slope);
-  fprintf(fp,"position\nx : %f  y : %f  deg : %f\n\n",x,y,slope);
+  fprintf(fp,"x : %f  y : %f  deg : %f\n",x,y,slope);
 }
 
-void serial_arduinowrite(int fd, int deff)
+void serial_arduinowrite(int fd, double phi)
 {
   int data;
   char mark[1],temp;
   char buf[255];
 
-
-  /*
+/*
   if(abs(deff) > 100){
     strcpy(buf, "");
 
@@ -493,17 +472,16 @@ void serial_arduinowrite(int fd, int deff)
     if(write(fd, buf, 1) < 0){
       printf("deffëóêMé∏îs\n");
       exit(1);
-    } 
+    }
   }
-  else{
-  */
+  else{*/
     data = x * 1000.0;
     strcpy(buf, "");
 
     //ñ⁄àÛëóêM
-    mark[0] = 127;
+    mark[0] = 126;
     if(write(fd, mark, 1) < 0){
-      printf("ñ⁄àÛëóêMé∏îs\n");
+      printf("mark sending error\n");
       exit(1);
     }
 
@@ -511,14 +489,15 @@ void serial_arduinowrite(int fd, int deff)
     temp = data;
     buf[0] = data>>8;
     if(write(fd, buf, 1) < 0){
-      printf("è„à ÉrÉbÉgëóêMé∏îs\n");
+      printf("upper bits sending error\n");
       exit(1);
     }
+    printf("----------------\n");
 
     //â∫à ÉrÉbÉgëóêM
     buf[0] = temp;
     if(write(fd, buf, 1) < 0){
-      printf("â∫à ÉrÉbÉgëóêMé∏îs\n");
+      printf("lower bit sending error\n");
       exit(1);
     }
   //}
@@ -526,28 +505,28 @@ void serial_arduinowrite(int fd, int deff)
 
 int kbhit(void)
 {
-    struct termios oldt, newt;
-    int ch;
-    int oldf;
+  struct termios oldt, newt;
+  int ch;
+  int oldf;
 
-    tcgetattr(STDIN_FILENO, &oldt);
-    newt = oldt;
-    newt.c_lflag &= ~(ICANON | ECHO);
-    tcsetattr(STDIN_FILENO, TCSANOW, &newt);
-    oldf = fcntl(STDIN_FILENO, F_GETFL, 0);
-    fcntl(STDIN_FILENO, F_SETFL, oldf | O_NONBLOCK);
+  tcgetattr(STDIN_FILENO, &oldt);
+  newt = oldt;
+  newt.c_lflag &= ~(ICANON | ECHO);
+  tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+  oldf = fcntl(STDIN_FILENO, F_GETFL, 0);
+  fcntl(STDIN_FILENO, F_SETFL, oldf | O_NONBLOCK);
 
-    ch = getchar();
+  ch = getchar();
 
-    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-    fcntl(STDIN_FILENO, F_SETFL, oldf);
+  tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+  fcntl(STDIN_FILENO, F_SETFL, oldf);
 
-    if (ch != EOF) {
-            ungetc(ch, stdin);
-            return 1;
-        }
+  if (ch != EOF) {
+    ungetc(ch, stdin);
+    return 1;
+  }
 
-    return 0;
+  return 0;
 }
 
 int main(int argc, char *argv[])
@@ -555,6 +534,8 @@ int main(int argc, char *argv[])
   int fd;
   char name[255], devicename[] = "/dev/ttyACM0";
   struct termios oldtio, newtio;
+
+  time_t start_time;
 
   enum {
     CAPTURE_TIMES = 1,
@@ -569,26 +550,25 @@ int main(int argc, char *argv[])
 
 
   /////arduinoÇ∆ÇÃí êM/////
-  /*
-     fd = open(devicename,O_RDWR|O_NONBLOCK);
-     if(fd<0) 
-     {
-     printf("ERROR on device open.\n");
-     exit(1);
-     }
-     ioctl(fd,TCGETS,&oldtio);
-     newtio = oldtio;
-     newtio.c_cflag = BAUDRATE | CRTSCTS | CS8 | CLOCAL | CREAD;
-     ioctl(fd,TCSETS,&newtio);
-     */
-    
-  fp = fopen("data2.txt","w");
+  fd = open(devicename,O_RDWR|O_NONBLOCK);
+  if(fd<0)
+  {
+    printf("ERROR on device open.\n");
+    exit(1);
+  }
+  ioctl(fd,TCGETS,&oldtio);
+  newtio = oldtio;
+  newtio.c_cflag = BAUDRATE | CRTSCTS | CS8 | CLOCAL | CREAD;
+  ioctl(fd,TCSETS,&newtio);
+
+  fp = fopen("20181106.txt","w");
   if(fp == NULL){
     printf("cant file open\n");
     exit(1);
   }
 
   while(!kbhit()){
+    start_time = time(NULL);
     /////ê˘âÒ/////
     if (open_urg_sensor(&urg, argc, argv, "192.168.0.10") < 0) {
       return 1;
@@ -622,7 +602,6 @@ int main(int argc, char *argv[])
     urg_close(&urg);
 
     /////à íu/////
-    /*
     if (open_urg_sensor(&urg, argc, argv, "172.16.0.10") < 0) {
       return 1;
     }
@@ -651,19 +630,17 @@ int main(int argc, char *argv[])
       print_data(&urg, data, n, time_stamp);
     }
 
-    //serial_arduinowrite(fd, deff);
+    serial_arduinowrite(fd, phi);
+    printf("time : %.1f sec\n", difftime(time(NULL), start_time));
     // êÿíf
     free(data);
     urg_close(&urg);
-    */
   }
-   fclose(fp);
+  fclose(fp);
 
   /////arduinoÇ∆ÇÃí êMêÿíf/////
-  /*
   ioctl(fd,TCSETS,&oldtio);
   close(fd);
-  */
 
 #if defined(URG_MSC)
   getchar();
