@@ -568,7 +568,9 @@ int main(int argc, char *argv[])
   }
 
   while(!kbhit()){
-    start_time = time(NULL);
+    //start_time = time(NULL);
+    time(&start_time);
+    printf("time : %s sec\n", ctime(&start_time));
     /////ù‰ñ/////
     if (open_urg_sensor(&urg, argc, argv, "192.168.0.10") < 0) {
       return 1;
@@ -611,11 +613,15 @@ int main(int argc, char *argv[])
       perror("urg_max_index()");
       return 1;
     }
+    time(&start_time);
+    printf("time : %s sec\n", ctime(&start_time));
 
     // ƒf[ƒ^æ“¾
     urg_set_scanning_parameter(&urg,
         urg_deg2step(&urg, -135),
         urg_deg2step(&urg, +135), 0);
+    time(&start_time);
+    printf("time : %s sec\n", ctime(&start_time));
 
     urg_start_measurement(&urg, URG_DISTANCE, URG_SCAN_INFINITY, 0);
     for (i = 0; i < CAPTURE_TIMES; ++i) {
@@ -631,10 +637,11 @@ int main(int argc, char *argv[])
     }
 
     serial_arduinowrite(fd, phi);
-    printf("time : %.1f sec\n", difftime(time(NULL), start_time));
+//    printf("time : %.1f sec\n", difftime(time(NULL), start_time));
     // Ø’f
     free(data);
     urg_close(&urg);
+
   }
   fclose(fp);
 
