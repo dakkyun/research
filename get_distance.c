@@ -213,7 +213,7 @@ void print_data(urg_t *urg, long data[], int data_n, long time_stamp)
         break;
       j += 10;
     }
-    if(k > 4){
+    if(k > 3){
       x_t_s = 0;
       for(n = 0;n < k;n++)
         x_t_s += x_t[step[n]];
@@ -286,7 +286,7 @@ void print_data(urg_t *urg, long data[], int data_n, long time_stamp)
         break;
       j -= 10;
     }
-    if(k > 4){
+    if(k > 3){
       x_t_s = 0;
       for(n = 0;n < k;n++)
         x_t_s += x_t[step[n]];
