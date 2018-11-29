@@ -22,7 +22,7 @@
 #include <termios.h>
 #include <unistd.h>
 
-int rotation(urg_t *urg, long data[], int data_n);
+int rotation(urg_t *urg2, long data[], int data_n);
 void serial_arduinowrite(int, double);
 
 double x, y, slope;
@@ -30,7 +30,7 @@ double x, y, slope;
 FILE *fp;
 
 
-int rotation(urg_t *urg, long data[], int data_n)
+int rotation(urg_t *urg2, long data[], int data_n)
 {
   int first_index, second_index, third_index, l;
   int i, j;
@@ -41,9 +41,9 @@ int rotation(urg_t *urg, long data[], int data_n)
   (void)data_n;
 
   // 12deg‚Ìƒf[ƒ^‚Ì‚İ‚ğ•\¦
-  first_index = urg_step2index(urg, -20);
-  second_index = urg_step2index(urg, +20);
-  third_index = urg_step2index(urg, 0);
+  first_index = urg_step2index(urg2, -20);
+  second_index = urg_step2index(urg2, +20);
+  third_index = urg_step2index(urg2, 0);
 
   for(i = 0; i < 2; i++){
     if(i == 0){
@@ -54,7 +54,7 @@ int rotation(urg_t *urg, long data[], int data_n)
       j = third_index;
       l = data[third_index];
     }
-    radian = urg_index2rad(urg, j);
+    radian = urg_index2rad(urg2, j);
     x[i] = (double)(l * cos(radian)) / 1000.0;
     y[i] = (double)(l * sin(radian)) / 1000.0;
   }
@@ -80,7 +80,7 @@ int rotation(urg_t *urg, long data[], int data_n)
 }
 
 
-void print_data(urg_t *urg, long data[], int data_n, long time_stamp)
+void print_data(urg_t *urg1, long data[], int data_n, long time_stamp)
 {
   int a = 0,i,j,k,l,m,n;	//Variable of if
   int flag;	//Whether a linear approximation
@@ -111,7 +111,7 @@ void print_data(urg_t *urg, long data[], int data_n, long time_stamp)
   long max_distance;
 
   // ‘S‚Ä‚Ìƒf[ƒ^‚Ì X-Y ‚ÌˆÊ’u‚ğ•\¦
-  urg_distance_min_max(urg, &min_distance, &max_distance);
+  urg_distance_min_max(urg1, &min_distance, &max_distance);
   for (i = 0; i < data_n; ++i) {
     long l = data[i];
     double radian;
@@ -123,7 +123,7 @@ void print_data(urg_t *urg, long data[], int data_n, long time_stamp)
     radian = (i - 180) * 0.25 * (M_PI / 180.0);
     x_t[i] = (double)(l * cos(-radian)) / 1000.0;
     y_t[i] = (double)(l * sin(-radian)) / 1000.0;
-    printf("%d (%lf, %lf) [mm]\n", i, x_t[i], y_t[i]);
+    //printf("%d (%lf, %lf) [mm]\n", i, x_t[i], y_t[i]);
   }
   //bottom line
   i = 410;
@@ -548,7 +548,7 @@ int main(int argc, char *argv[])
   enum {
     CAPTURE_TIMES = 1,
   };
-  urg_t urg;
+  urg_t urg1, urg2;
   long *data = NULL;
   long time_stamp;
   int n;
@@ -559,99 +559,107 @@ int main(int argc, char *argv[])
 
   /////arduino‚Æ‚Ì’ÊM/////
   /*
-  fd = open(devicename,O_RDWR|O_NONBLOCK);
-  if(fd<0)
-  {
-    printf("ERROR on device open.\n");
-    exit(1);
-  }
-  ioctl(fd,TCGETS,&oldtio);
-  newtio = oldtio;
-  newtio.c_cflag = BAUDRATE | CRTSCTS | CS8 | CLOCAL | CREAD;
-  ioctl(fd,TCSETS,&newtio);
-  */
+     fd = open(devicename,O_RDWR|O_NONBLOCK);
+     if(fd<0)
+     {
+     printf("ERROR on device open.\n");
+     exit(1);
+     }
+     ioctl(fd,TCGETS,&oldtio);
+     newtio = oldtio;
+     newtio.c_cflag = BAUDRATE | CRTSCTS | CS8 | CLOCAL | CREAD;
+     ioctl(fd,TCSETS,&newtio);
+     */
 
-  fp = fopen("20181116_1.txt","w");
+  fp = fopen("test.txt","w");
   if(fp == NULL){
     printf("cant file open\n");
     exit(1);
   }
 
-  if (open_urg_sensor(&urg, argc, argv, "172.16.0.10") < 0) {
+  if (open_urg_sensor(&urg2, argc, argv, "192.168.0.10") < 0) {
+    return 1;
+  }
+
+  if (open_urg_sensor(&urg1, argc, argv, "172.16.0.10") < 0) {
     return 1;
   }
 
   while(!kbhit()){
     starttime = clock();
-      /////ù‰ñ/////
-      /*
-         if (open_urg_sensor(&urg, argc, argv, "192.168.0.10") < 0) {
-         return 1;
-         }
+    /////ù‰ñ/////
+    /*
+       if (open_urg_sensor(&urg, argc, argv, "192.168.0.10") < 0) {
+       return 1;
+       }
+       */
 
-         data = (long *)malloc(urg_max_data_size(&urg) * sizeof(data[0]));
-         if (!data) {
-         perror("urg_max_index()");
-         return 1;
-         }
+    data = (long *)malloc(urg_max_data_size(&urg2) * sizeof(data[0]));
+    if (!data) {
+      perror("urg_max_index()");
+      return 1;
+    }
 
-      // ƒf[ƒ^æ“¾
-      urg_set_scanning_parameter(&urg,
-      urg_deg2step(&urg, -90),
-      urg_deg2step(&urg, +90), 0);
+    // ƒf[ƒ^æ“¾
+    urg_set_scanning_parameter(&urg2,
+        urg_deg2step(&urg2, -90),
+        urg_deg2step(&urg2, +90), 0);
 
-      urg_start_measurement(&urg, URG_DISTANCE, URG_SCAN_INFINITY, 0);
-      for (i = 0; i < CAPTURE_TIMES; ++i) {
-      n = urg_get_distance(&urg, data, &time_stamp);
+    urg_start_measurement(&urg2, URG_DISTANCE, URG_SCAN_INFINITY, 0);
+    for (i = 0; i < CAPTURE_TIMES; ++i) {
+      n = urg_get_distance(&urg2, data, &time_stamp);
 
       if (n <= 0) {
-      printf("error\n");
-      free(data);
-      urg_close(&urg);
-      return 1;
-      }
-      phi = rotation(&urg, data, n);
-      }
-      // Ø’f
-      free(data);
-      urg_close(&urg);
-      */
-
-      /////ˆÊ’u/////
-      /*
-         if (open_urg_sensor(&urg, argc, argv, "172.16.0.10") < 0) {
-         return 1;
-         }
-         */
-
-      data = (long *)malloc(urg_max_data_size(&urg) * sizeof(data[0]));
-      if (!data) {
-        perror("urg_max_index()");
+        printf("error\n");
+        free(data);
+        urg_close(&urg2);
         return 1;
       }
+      phi = rotation(&urg2, data, n);
+    }
+    // Ø’f
+    /*
+       free(data);
+       urg_close(&urg);
+       */
 
-      // ƒf[ƒ^æ“¾
-      urg_set_scanning_parameter(&urg,
-          urg_deg2step(&urg, -135),
-          urg_deg2step(&urg, +135), 0);
+    /////ˆÊ’u/////
+    /*
+       if (open_urg_sensor(&urg, argc, argv, "172.16.0.10") < 0) {
+       return 1;
+       }
+       */
 
-      urg_start_measurement(&urg, URG_DISTANCE, URG_SCAN_INFINITY, 0);
-      for (i = 0; i < CAPTURE_TIMES; ++i) {
-        n = urg_get_distance(&urg, data, &time_stamp);
+    data = (long *)malloc(urg_max_data_size(&urg1) * sizeof(data[0]));
+    if (!data) {
+      perror("urg_max_index()");
+      return 1;
+    }
 
-        if (n <= 0) {
-          printf("error\n");
-          free(data);
-          urg_close(&urg);
-          return 1;
-        }
-        print_data(&urg, data, n, time_stamp);
+    // ƒf[ƒ^æ“¾
+    urg_set_scanning_parameter(&urg1,
+        urg_deg2step(&urg1, -135),
+        urg_deg2step(&urg1, +135), 0);
+
+    urg_start_measurement(&urg1, URG_DISTANCE, URG_SCAN_INFINITY, 0);
+    for (i = 0; i < CAPTURE_TIMES; ++i) {
+      n = urg_get_distance(&urg1, data, &time_stamp);
+
+      if (n <= 0) {
+        printf("error\n");
+        free(data);
+        urg_close(&urg1);
+        return 1;
       }
+      print_data(&urg1, data, n, time_stamp);
+    }
 
-        //serial_arduinowrite(fd, phi);
-      // Ø’f
-      //free(data);
-      //urg_close(&urg);
+    //serial_arduinowrite(fd, phi);
+    // Ø’f
+    /*
+       free(data);
+       urg_close(&urg);
+       */
     endtime = clock();
     difftime = (double)(endtime - starttime) / CLOCKS_PER_SEC;
     while(difftime < 0.05){
@@ -660,15 +668,14 @@ int main(int argc, char *argv[])
     }
     printf("time : %f msec\n", difftime);
 
-    //starttime = clock();
   }
   fclose(fp);
 
   /////arduino‚Æ‚Ì’ÊMØ’f/////
   /*
-  ioctl(fd,TCSETS,&oldtio);
-  close(fd);
-  */
+     ioctl(fd,TCSETS,&oldtio);
+     close(fd);
+     */
 
 #if defined(URG_MSC)
   getchar();
